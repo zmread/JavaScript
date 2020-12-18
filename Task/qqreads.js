@@ -381,23 +381,23 @@ function qqreadtrack() {
 
 
 //提现
-function qqreadwithdraw() {
-  return new Promise((resolve, reject) => {
-    const toqqreadwithdrawurl = {
-      url: "https://mqqapi.reader.qq.com/mqq/red_packet/user/withdraw?amount=100000",
-      headers: JSON.parse(qqreadtimeheaderVal),
-      timeout: 60000,
-    };
-    $.post(toqqreadwithdrawurl, (error, response, data) => {
-      if (logs) $.log(`${jsname}, 提现: ${data}`);
-      withdraw = JSON.parse(data);
-if(withdraw.data.code==0)
-      tz += `【现金提现】:成功提现10元\n`;
-      kz += `【现金提现】:成功提现10元\n`;
-      resolve();
-    });
-  });
-}
+//function qqreadwithdraw() {
+//  return new Promise((resolve, reject) => {
+//    const toqqreadwithdrawurl = {
+//      url: "https://mqqapi.reader.qq.com/mqq/red_packet/user/withdraw?amount=100000",
+//      headers: JSON.parse(qqreadtimeheaderVal),
+//      timeout: 60000,
+//    };
+//    $.post(toqqreadwithdrawurl, (error, response, data) => {
+//      if (logs) $.log(`${jsname}, 提现: ${data}`);
+//      withdraw = JSON.parse(data);
+//if(withdraw.data.code==0)
+//      tz += `【现金提现】:成功提现10元\n`;
+//      kz += `【现金提现】:成功提现10元\n`;
+//      resolve();
+//    });
+//  });
+//}
 
 
 
